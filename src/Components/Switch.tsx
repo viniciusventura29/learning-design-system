@@ -1,11 +1,25 @@
-import * as SwitchPrimitive from '@radix-ui/react-switch';
+import * as SwitchPrimitive from "@radix-ui/react-switch";
+import { clsx } from "clsx";
+import React from "react";
 
-export interface SwitchProps {}
-
-export function Switch(props:SwitchProps){
-  return(
-  <SwitchPrimitive.Root className='w-10 h-6 bg-black rounded-full '>
-    <SwitchPrimitive.Thumb className='w-full h-full bg-gray-100 rounded-full translate-x-3' />
-  </SwitchPrimitive.Root>
-  )
+export interface SwitchProps extends SwitchPrimitive.SwitchProps {
+  className?: string
 }
+
+export function Switch ({className}: SwitchProps) {
+  return (
+    <SwitchPrimitive.Root
+      className={clsx(
+        "group radix-state-checked:bg-cyan-500 radix-state-unchecked:bg-gray-200 relative inline-flex h-[24px] w-[44px] flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out",
+        className)}
+    >
+      <SwitchPrimitive.Thumb
+        className={clsx(
+          "group-radix-state-checked:translate-x-5 group-radix-state-unchecked:translate-x-0 pointer-events-none inline-block h-[20px] w-[20px] transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out"
+        )}
+      />
+    </SwitchPrimitive.Root>
+  );
+};
+
+export default Switch;

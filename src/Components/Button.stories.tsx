@@ -9,4 +9,13 @@ export default {
   },
 } as Meta<ButtonProps>;
 
-export const Default: StoryObj<ButtonProps> = {};
+export const Default: StoryObj<ButtonProps> = {
+  argTypes: {
+    asChild: {
+      table: {
+        disable: true,
+      },
+    },
+  },
+};
+

@@ -4,6 +4,7 @@ import { Checkbox } from "./Components/Checkbox";
 import { Heading } from "./Components/Heading";
 import { Text } from "./Components/Text";
 import { TextInput } from "./Components/TextInput";
+import Switch from "./Components/Switch";
 import Logo from "./Logo";
 import "./styles/global.css";
 

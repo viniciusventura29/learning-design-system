@@ -18,34 +18,68 @@ export default {
   },
 } as Meta<TextProps>;
 
-export const Default: StoryObj<TextProps> = {};
+export const Default: StoryObj<TextProps> = {
+  argTypes: {
+    asChild: {
+      table: {
+        disable: true,
+      },
+    },
+    className:{
+      table: {
+        disable:true,
+      }
+    }
+  },
+};
 export const Small: StoryObj<TextProps> = {
   args: {
     size: "sm",
+  },
+
+  argTypes: {
+    asChild: {
+      table: {
+        disable: true,
+      },
+    },
+    className:{
+      table: {
+        disable:true,
+      }
+    }
   },
 };
 export const Large: StoryObj<TextProps> = {
   args: {
     size: "lg",
   },
-};
-
-export const CustomComponent: StoryObj<TextProps> = {
-  args: {
-    asChild: true,
-    children: <p>Text</p>,
-  },
 
   argTypes: {
-    children: {
-      table: {
-        disable: true,
-      },
-    },
     asChild: {
       table: {
         disable: true,
       },
     },
+    className:{
+      table: {
+        disable:true,
+      }
+    }
+  },
+};
+
+export const CustomComponent: StoryObj<TextProps> = {
+  argTypes: {
+    asChild: {
+      table: {
+        disable: true,
+      },
+    },
+    className:{
+      table: {
+        disable:true,
+      }
+    }
   },
 };
