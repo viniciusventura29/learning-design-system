@@ -11,25 +11,9 @@ export default {
   component: Toast,
   args: {
     children: [
-     
-        <Toast>as</Toast>
+        "Type your text here"
      ],
   },
-  argTypes: {
-    children: {
-      table: {
-        disable: true,
-      },
-    },
-  },
-} as Meta<ToastProps>;
+};
 
 export const Default: StoryObj<ToastProps> = {};
-
-export const WithoutIcon: StoryObj<ToastProps> = {
-  args:{
-    children:(
-      <Toast/>
-    )
-  }
-};
