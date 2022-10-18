@@ -17,10 +17,13 @@ module.exports = {
       'black': "#000",
       'white': '#fff',
       'transparent': 'transparent',
+      'orange': '#F97316',
+      'red': '#FF4444',
 
       gray:{
         900: '#121214',
         800: '#282824',
+        500: '#5A5A63',
         400: '#7c7c8a',
         200: '#c4c4cc',
         100: '#e1e1e6',
@@ -29,6 +32,7 @@ module.exports = {
       cyan:{
         500: '#81d8f7',
         300: '#9be1fb',
+        200: '#A5F3FC'
       },
     },
     extend: {
