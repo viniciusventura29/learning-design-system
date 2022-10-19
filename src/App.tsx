@@ -66,13 +66,13 @@ export function App() {
       </form>
 
       <Toast.Root type="Error">
-        <Toast.Input title="Calma mai">
-          Eu to fudido tbm, acho que ele realmente n sabe oq fazer
+        <Toast.Input title="Gordo viadinho">
+          HASBDAHSDJASHDJASHDHASDBASH mlk ta funfanfo
         </Toast.Input>
       </Toast.Root>
 
       <Toast.Root type="Info">
-        <Toast.Input title="Calma mai">
+        <Toast.Input title="Informação">
           Eu to fudido tbm, acho que ele realmente n sabe oq fazer
         </Toast.Input>
       </Toast.Root>

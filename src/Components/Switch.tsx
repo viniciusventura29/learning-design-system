@@ -6,17 +6,23 @@ export interface SwitchProps extends SwitchPrimitive.SwitchProps {
   className?: string;
   size?: "sm" | "md" | "lg";
   children: ReactNode;
+  allowed?:"able" | "disable"
 }
 
-export function Switch({ children, className, size = "md" }: SwitchProps) {
+export function Switch({allowed="able", children, className, size = "md" }: SwitchProps) {
+  let allow;
+  allowed === "disable"? (allow = true) : false
   return (
-    <SwitchPrimitive.Root
+    <SwitchPrimitive.Root disabled={allow}
       className={clsx(
         "group radix-state-checked:bg-cyan-500 radix-state-unchecked:bg-gray-200 relative inline-flex flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out",
         {
           "w-[40px] h-[20px]": size === "sm",
           "w-[45px] h-[25px]": size === "md",
           "w-[50px] h-[30px]": size === "lg",
+        },
+        {
+          "cursor-not-allowed opacity-80": allowed ==="disable"
         },
         className
       )}

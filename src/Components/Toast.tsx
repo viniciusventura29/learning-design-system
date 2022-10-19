@@ -59,7 +59,7 @@ export function ToastBody({ children, ...props }: ToastBodyProps) {
   return (
     <div className="ml-4 flex flex-col">
       <span className="text-md font-bold text-black">{props.title}</span>
-      <span className="text-gray-500 max-w[25rem] text-justify">
+      <span className="text-gray-500 max-w-[25rem] text-justify">
         {" "}
         {children}{" "}
       </span>

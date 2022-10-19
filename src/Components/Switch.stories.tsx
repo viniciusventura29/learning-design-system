@@ -6,6 +6,12 @@ export default {
   title: "Components/Switch",
   component: Switch,
   argTypes: {
+    allowed:{
+      options:['able','disable'],
+      control: {
+        type: "inline-radio",
+      },
+    },
     size: {
       options: ["sm", "md", "lg"],
       control: {
