@@ -19,6 +19,7 @@ module.exports = {
       'transparent': 'transparent',
       'orange': '#F97316',
       'red': '#FF4444',
+      'green': '#22c55e',
 
       gray:{
         900: '#121214',

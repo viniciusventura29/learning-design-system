@@ -16,6 +16,11 @@ export const Default: StoryObj<ButtonProps> = {
         disable: true,
       },
     },
+    className: {
+      table: {
+        disable: true,
+      },
+    },
   },
 };
 
