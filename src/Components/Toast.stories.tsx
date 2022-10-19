@@ -1,20 +1,21 @@
 import { Meta, StoryObj } from "@storybook/react";
-import {
-  ToastInfo,
-  ToastWarning,
-  ToastSuccess,
-  ToastError,
-  ToastProps,
-} from "./Toast";
+import { Toast, ToastBody, ToastRootProps, ToastIcon } from "./Toast";
 
 import { Info } from 'phosphor-react'
 
 export default {
   title: "Components/Toast",
-  component: ToastInfo,
+  component: Toast.Root,
   args: {
-    children: "Type your text here",
-     title: "Title",
+    children: [
+      <Toast.Icon >
+        <Info size={70} color="#81d8f7" />
+      </Toast.Icon>,
+      <Toast.Input title="ASDASDASFASFASFASFSFASFASFSFSF" > 
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+      </Toast.Input>
+    ],
+
   },
   argTypes: {
     type: {
@@ -25,17 +26,5 @@ export default {
   },
 }
 
-export const Default: StoryObj<ToastProps> = {
-  argTypes:{
-    asChild:{
-      table:{
-        disable:true
-      }
-    },
-    className:{
-      table:{
-        disable:true
-      }
-    }
-  }
+export const Default: StoryObj<ToastRootProps> = {
 };

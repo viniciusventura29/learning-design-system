@@ -1,4 +1,4 @@
-import { Envelope, Lock } from "phosphor-react";
+import { Envelope, Info, Lock } from "phosphor-react";
 import { Button } from "./Components/Button";
 import { Checkbox } from "./Components/Checkbox";
 import { Heading } from "./Components/Heading";
@@ -7,6 +7,7 @@ import { TextInput } from "./Components/TextInput";
 import { Switch } from "./Components/Switch";
 import Logo from "./Logo";
 import "./styles/global.css";
+import { Toast } from "./Components/Toast";
 
 export function App() {
   return (
@@ -63,6 +64,16 @@ export function App() {
           Entrar na plataforma
         </Button>
       </form>
+
+      <Toast.Root>
+        <Toast.Icon >
+          <Info />
+        </Toast.Icon>
+
+        <Toast.Input title="Calma mai">
+          Eu to fudido tbm, acho que ele realmente n sabe oq fazer
+        </Toast.Input>
+      </Toast.Root>
 
       <footer className="flex flex-col items-center gap-4 mt-8">
         <Text asChild>
