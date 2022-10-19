@@ -8,18 +8,18 @@ export interface ToastRootProps {
   type: "Info" | "Success" | "Warning" | "Error";
 }
 
-export function ToastRoot({ type = "Success", ...props }: ToastRootProps) {
+export function ToastRoot({ type = "Info", ...props }: ToastRootProps) {
   let icon;
-  type === "Info" ? (icon = <Info size={70} color="#81d8f7" />) : null;
-  type === "Success" ? (icon = <CheckCircle size={70} color="#22c55e" />) : null;
-  type === "Warning" ? (icon = <Warning size={70} color="#F97316" />) : null;
-  type === "Error" ? (icon = <XCircle size={70} color="#FF4444" />) : null;
+  type === "Info" ? (icon = <Info size={50} color="#81d8f7" />) : null;
+  type === "Success" ? (icon = <CheckCircle size={50} color="#22c55e" />) : null;
+  type === "Warning" ? (icon = <Warning size={50} color="#F97316" />) : null;
+  type === "Error" ? (icon = <XCircle size={50} color="#FF4444" />) : null;
 
   return (
     <ToastPrimitive.ToastProvider>
       <ToastPrimitive.Root
         className={clsx(
-          "flex items-center border-l-8 bg-white rounded p-4 pr-20 absolute z-10 right-4 bottom-6 gap-5",
+          "flex items-center text-[12px] border-l-8 bg-white rounded p-3 pr-16 absolute z-10 right-4 bottom-6 gap-5",
           {
             "border-cyan-500": type === "Info",
             "border-green": type === "Success",
@@ -28,7 +28,7 @@ export function ToastRoot({ type = "Success", ...props }: ToastRootProps) {
           }
         )}
       >
-        <>
+        <> 
           {icon}
           {props.children}
         </>
@@ -58,8 +58,8 @@ export interface ToastBodyProps {
 export function ToastBody({ children, ...props }: ToastBodyProps) {
   return (
     <div className="ml-4 flex flex-col">
-      <span className="text-lg font-bold text-black">{props.title}</span>
-      <span className="text-gray-500 w-[30rem] mt-1 text-justify">
+      <span className="text-md font-bold text-black">{props.title}</span>
+      <span className="text-gray-500 max-w[25rem] text-justify">
         {" "}
         {children}{" "}
       </span>
