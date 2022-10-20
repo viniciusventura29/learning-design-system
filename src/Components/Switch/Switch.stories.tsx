@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Switch, SwitchProps } from "./Switch";
-import { Text } from "./Text";
+import { Text } from "../Texts/Text";
 
 export default {
   title: "Components/Switch",

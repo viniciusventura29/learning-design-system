@@ -6,9 +6,10 @@ import { ReactNode } from "react";
 export interface ToastRootProps {
   children: ReactNode;
   type: "Info" | "Success" | "Warning" | "Error";
+  time?:number
 }
 
-export function ToastRoot({ type = "Info", ...props }: ToastRootProps) {
+export function ToastRoot({time=8000, type = "Info", ...props }: ToastRootProps) {
   let icon;
   type === "Info" ? (icon = <Info size={50} color="#81d8f7" />) : null;
   type === "Success" ? (icon = <CheckCircle size={50} color="#22c55e" />) : null;
@@ -16,7 +17,7 @@ export function ToastRoot({ type = "Info", ...props }: ToastRootProps) {
   type === "Error" ? (icon = <XCircle size={50} color="#FF4444" />) : null;
 
   return (
-    <ToastPrimitive.ToastProvider>
+    <ToastPrimitive.ToastProvider duration={time}>
       <ToastPrimitive.Root
         className={clsx(
           "flex items-center text-[12px] border-l-8 bg-white rounded p-3 pr-16 absolute z-10 right-4 bottom-6 gap-5",

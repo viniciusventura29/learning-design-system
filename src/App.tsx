@@ -1,13 +1,13 @@
 import { Envelope, Info, Lock } from "phosphor-react";
-import { Button } from "./Components/Button";
-import { Checkbox } from "./Components/Checkbox";
-import { Heading } from "./Components/Heading";
-import { Text } from "./Components/Text";
-import { TextInput } from "./Components/TextInput";
-import { Switch } from "./Components/Switch";
+import { Button } from "./Components/Button/Button";
+import { Checkbox } from "./Components/Checkbox/Checkbox";
+import { Heading } from "./Components/Texts/Heading";
+import { Text } from "./Components/Texts/Text";
+import { TextInput } from "./Components/TextInput/TextInput";
+import { Switch } from "./Components/Switch/Switch";
 import Logo from "./Logo";
 import "./styles/global.css";
-import { Toast } from "./Components/Toast";
+import { Toast } from "./Components/Toast/Toast";
 
 export function App() {
   return (
