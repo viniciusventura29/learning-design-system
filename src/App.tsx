@@ -8,6 +8,7 @@ import { Switch } from "./Components/Switch/Switch";
 import Logo from "./Logo";
 import "./styles/global.css";
 import { Toast } from "./Components/Toast/Toast";
+import { CircularProgress } from "./Components/CircularProgress/CircularProgress";
 
 export function App() {
   return (
@@ -65,17 +66,8 @@ export function App() {
         </Button>
       </form>
 
-      <Toast.Root type="Error">
-        <Toast.Input title="Gordo viadinho">
-          HASBDAHSDJASHDJASHDHASDBASH mlk ta funfanfo
-        </Toast.Input>
-      </Toast.Root>
 
-      <Toast.Root type="Info">
-        <Toast.Input title="Informação">
-          Eu to fudido tbm, acho que ele realmente n sabe oq fazer
-        </Toast.Input>
-      </Toast.Root>
+      <CircularProgress />
 
       <footer className="flex flex-col items-center gap-4 mt-8">
         <Text asChild>
