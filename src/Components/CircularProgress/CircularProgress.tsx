@@ -1,34 +1,23 @@
+import { useState } from "react";
 import { CircularProgressbar } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
 
 export interface CircularProgressProps{}
 
 export function CircularProgress() {
-  return(
-  <div
-  x-data="scrollProgress"
-  className="w-30 h-30 fixed inline-flex items-center justify-center overflow-hidden rounded-full bottom-5 left-5"
->
-  <svg className="w-20 h-20">
-    <circle
-      className="text-gray-300" stroke-width="5" stroke="black"
-      fill="transparent" r="30"
-      cx="40" cy="40"
-    />
-    <circle
-      className="text-cyan-500"
-      stroke-width="5"
-      stroke-dasharray="circumference"
-      stroke-dashoffset="circumference - percent / 100 * circumference"
-      stroke-linecap="round"
-      stroke="black"
-      fill="transparent"
-      r="30"
-      cx="40"
-      cy="40"
-    />
-  </svg>
-  <span className="absolute text-xl text-cyan-500" x-text="`${percent}%`"></span>
-  <h1>SDFSDFSDF</h1>
+  const [step, setStep] = useState(0);
+
+  var progress = step > 0 ? step / 4 : 0;
+var percentage = 100 * progress;
+
+// Status from "Stopped" to "Done"
+var status = step > 0 ? (step < 4 ? "In Progress" : "Done") : "Stopped";
+  return(<div>
+    <h1>Step {step}</h1>
+<div className="progress-container">
+  <CircularProgressbar value={percentage} text={`${percentage}%`} />
+</div>
+<h2>Status: {status}</h2>
 </div>
   )
 }
